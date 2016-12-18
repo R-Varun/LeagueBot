@@ -7,7 +7,6 @@ import distance
 
 from config import Constants
 
-ID_LOOKUP_CACHE = {}
 
 client = discord.Client()
 
@@ -71,12 +70,6 @@ async def on_member_join(member):
     fmt = 'Welcome {0.mention} to the server!'
     await client.send_message(server, fmt.format(member))
 
-def format_sum_id(aString):
-    retString = "";
-    for char in aString:
-        if char != " ":
-            retString += char
-    return retString.lower()
 
 
 #returns an tuple of (status_code, data)

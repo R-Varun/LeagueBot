@@ -1,8 +1,17 @@
 import requests
 from config import Constants
+ID_LOOKUP_CACHE = {}
 
 URLS = {"sum_id":"https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/"
         ,"sum_stats": "https://na.api.pvp.net/api/lol/na/v2.5/league/by-summoner/"}
+
+
+def format_sum_id(aString):
+    retString = "";
+    for char in aString:
+        if char != " ":
+            retString += char
+    return retString.lower()
 
 
 def lookup_summoner_id(sumID):
