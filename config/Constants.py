@@ -2,7 +2,7 @@
 
 myToken = "your Token here"
 
-BannedWords = ["bitch"]
+BannedWords = ["idk"]
 
 
 
